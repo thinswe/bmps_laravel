@@ -18,11 +18,19 @@ Route::get('/', function () {
 });
 
 Route::get('about', function () {
-    return "this is about page";
+    return view('about');
 });
 
 Route::get('/contact', function () {
-    return "this is contact page";
+    return view('contact');
+});
+
+Route::get('/shop', function () {
+    return view('shops.shop');
+});
+
+Route::get('/products', function () {
+    return view('products');
 });
 
 Route::get('/products/{product_id}/shop/{shop_id}', function ($product_id,$shop_id) {
