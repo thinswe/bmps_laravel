@@ -8,10 +8,7 @@
 
 </head>
 <body>
-    <ul>
-            @foreach ($products as $product)
-                <li>{{$product}}</li>
-            @endforeach
-    </ul>
+    <h2>Hello {{$name}}</h2>
+    <h3>Your age is {{$age}}</h3>
 </body>
 </html>

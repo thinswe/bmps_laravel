@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about', [AboutController::class,'aboutPage']);
+Route::get('about', [AboutController::class,'aboutPage'])->middleware('testMw');
 
 Route::get('/contact',[ContactController::class,'contactPage']);
 
@@ -32,3 +32,5 @@ Route::get('/shop', function () {
 Route::get('/products', [ProductController::class,'productList']);
 
 Route::get('/products/{product_id}/shop/{shop_id}', [ProductController::class,'productPage']);
+
+Route::post('api/promotions', [Controller::class,'showPromotions']);
