@@ -29,8 +29,6 @@ Route::get('/shop', function () {
     return view('shops.shop');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', [ProductController::class,'productList']);
 
 Route::get('/products/{product_id}/shop/{shop_id}', [ProductController::class,'productPage']);
