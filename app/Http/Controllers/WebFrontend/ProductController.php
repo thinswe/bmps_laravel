@@ -17,4 +17,8 @@ class ProductController extends Controller
             'products'=>$products_lists
         ]);
     }
+
+    function productDetail($product_id){
+        return "this is product for product id ".$product_id;
+    }
 }

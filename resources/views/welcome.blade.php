@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Hello</h2>
+    <ul>
+        @foreach ($data as $key=>$product)
+            <li><a href="{{ route('website.product-detail',['product_id'=>$product]) }}">product {{$product}}</a></li>
+        @endforeach
+
+
+    </ul>
 </body>
 </html>
