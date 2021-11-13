@@ -2,6 +2,15 @@
 
 @section('title','About')
 
+@section('css')
+<link rel="stylesheet" href="{{asset('css/about.css')}}">
+@endsection
+
 @section('content')
-    <h2>This is About</h2>
+    <h2 class="text">This is About</h2>
+    <img src="{{url('image/aa.jpg')}}" width="100px" alt="">
+@endsection
+
+@section('js')
+<script src="{{asset('js/about.js')}}"></script>
 @endsection
