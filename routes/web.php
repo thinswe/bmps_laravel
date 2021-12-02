@@ -17,12 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $products = [11,2,3,4,5,6,7,8];
-    return view('welcome')->with([
-        'data'=>$products
-    ]);
-});
+Route::get('/', [Controller::class,'homePage']);
 
 // Route::get('about', [AboutController::class,'aboutPage'])->middleware('testMw');
 Route::get('about', [AboutController::class,'aboutPage'])->name('website.about');
